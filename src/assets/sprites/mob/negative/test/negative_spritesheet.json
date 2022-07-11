@@ -1,0 +1,356 @@
+{
+	"textures": [
+		{
+			"image": "negative_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1586,
+				"h": 901
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "room2_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 232,
+						"h": 864
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 232,
+						"h": 864
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 232,
+						"h": 864
+					}
+				},
+				{
+					"filename": "room1_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 208,
+						"h": 860
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 7,
+						"w": 204,
+						"h": 842
+					},
+					"frame": {
+						"x": 235,
+						"y": 1,
+						"w": 204,
+						"h": 842
+					}
+				},
+				{
+					"filename": "border",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 196,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 196,
+						"h": 40
+					},
+					"frame": {
+						"x": 235,
+						"y": 845,
+						"w": 196,
+						"h": 40
+					}
+				},
+				{
+					"filename": "room3_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 4,
+						"w": 410,
+						"h": 320
+					},
+					"frame": {
+						"x": 441,
+						"y": 1,
+						"w": 410,
+						"h": 320
+					}
+				},
+				{
+					"filename": "room5_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 272,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 269,
+						"h": 472
+					},
+					"frame": {
+						"x": 853,
+						"y": 1,
+						"w": 269,
+						"h": 472
+					}
+				},
+				{
+					"filename": "room3_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 192,
+						"h": 488
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 183,
+						"h": 481
+					},
+					"frame": {
+						"x": 441,
+						"y": 323,
+						"w": 183,
+						"h": 481
+					}
+				},
+				{
+					"filename": "room4_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 192,
+						"h": 380
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 192,
+						"h": 380
+					},
+					"frame": {
+						"x": 626,
+						"y": 323,
+						"w": 192,
+						"h": 380
+					}
+				},
+				{
+					"filename": "room4_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 240,
+						"h": 180
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 3,
+						"w": 234,
+						"h": 176
+					},
+					"frame": {
+						"x": 626,
+						"y": 705,
+						"w": 234,
+						"h": 176
+					}
+				},
+				{
+					"filename": "room4_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 199,
+						"h": 223
+					},
+					"frame": {
+						"x": 820,
+						"y": 475,
+						"w": 199,
+						"h": 223
+					}
+				},
+				{
+					"filename": "room5_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 212,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 212,
+						"h": 200
+					},
+					"frame": {
+						"x": 862,
+						"y": 700,
+						"w": 212,
+						"h": 200
+					}
+				},
+				{
+					"filename": "room2_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 200,
+						"h": 212
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 200,
+						"h": 212
+					},
+					"frame": {
+						"x": 1021,
+						"y": 475,
+						"w": 200,
+						"h": 212
+					}
+				},
+				{
+					"filename": "room5_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 186,
+						"h": 200
+					},
+					"frame": {
+						"x": 1076,
+						"y": 689,
+						"w": 186,
+						"h": 200
+					}
+				},
+				{
+					"filename": "room1_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 288
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 254,
+						"h": 285
+					},
+					"frame": {
+						"x": 1124,
+						"y": 1,
+						"w": 254,
+						"h": 285
+					}
+				},
+				{
+					"filename": "room2_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 184,
+						"h": 376
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 182,
+						"h": 373
+					},
+					"frame": {
+						"x": 1223,
+						"y": 288,
+						"w": 182,
+						"h": 373
+					}
+				},
+				{
+					"filename": "room3_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 220,
+						"h": 252
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 3,
+						"w": 205,
+						"h": 249
+					},
+					"frame": {
+						"x": 1380,
+						"y": 1,
+						"w": 205,
+						"h": 249
+					}
+				},
+				{
+					"filename": "room1_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 168,
+						"h": 340
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 168,
+						"h": 340
+					},
+					"frame": {
+						"x": 1407,
+						"y": 252,
+						"w": 168,
+						"h": 340
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9ff0dd357b31e9a2248758a5af38979f:371ee047004c5256bf28d9e8a99071f1:b1ecde0fd3dbb5233f17942bb4db5f27$"
+	}
+}
