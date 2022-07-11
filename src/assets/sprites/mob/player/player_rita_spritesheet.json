@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "player_rita_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 152,
+				"h": 98
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "player_rita_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 80,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 4,
+						"w": 74,
+						"h": 96
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 74,
+						"h": 96
+					}
+				},
+				{
+					"filename": "player_rita_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 80,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 4,
+						"w": 74,
+						"h": 96
+					},
+					"frame": {
+						"x": 77,
+						"y": 1,
+						"w": 74,
+						"h": 96
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4c5473145e3a0ba19c66ff1aa315b670:abd59fffeea1a9944ddd7d82a59d6edc:2eafdaaaab84c9daffecba7f506a51b4$"
+	}
+}

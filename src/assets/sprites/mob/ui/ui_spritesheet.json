@@ -1,0 +1,188 @@
+{
+	"textures": [
+		{
+			"image": "ui_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 413,
+				"h": 126
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "start",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 194,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 194,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 194,
+						"h": 64
+					}
+				},
+				{
+					"filename": "musicOff",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 58,
+						"h": 58
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 58,
+						"h": 58
+					},
+					"frame": {
+						"x": 1,
+						"y": 67,
+						"w": 58,
+						"h": 58
+					}
+				},
+				{
+					"filename": "musicOn",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 58,
+						"h": 58
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 58,
+						"h": 58
+					},
+					"frame": {
+						"x": 61,
+						"y": 67,
+						"w": 58,
+						"h": 58
+					}
+				},
+				{
+					"filename": "score_rectangle",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 136,
+						"h": 57
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 136,
+						"h": 57
+					},
+					"frame": {
+						"x": 121,
+						"y": 67,
+						"w": 136,
+						"h": 57
+					}
+				},
+				{
+					"filename": "start_hover",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 194,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 194,
+						"h": 64
+					},
+					"frame": {
+						"x": 197,
+						"y": 1,
+						"w": 194,
+						"h": 64
+					}
+				},
+				{
+					"filename": "hp",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 49
+					},
+					"frame": {
+						"x": 259,
+						"y": 67,
+						"w": 56,
+						"h": 49
+					}
+				},
+				{
+					"filename": "not_hp",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 49
+					},
+					"frame": {
+						"x": 317,
+						"y": 67,
+						"w": 56,
+						"h": 49
+					}
+				},
+				{
+					"filename": "score_coin",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 4,
+						"w": 37,
+						"h": 36
+					},
+					"frame": {
+						"x": 375,
+						"y": 67,
+						"w": 37,
+						"h": 36
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c9b2bd6e86def361b18a356b1a0bc71e:d7714a4645c2c5806958e15082fb2c03:ab754f880d04633e078d151ebb7d2401$"
+	}
+}
