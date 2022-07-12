@@ -4,8 +4,8 @@
 			"image": "ui_spritesheet.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 413,
-				"h": 126
+				"w": 856,
+				"h": 248
 			},
 			"scale": 1,
 			"frames": [
@@ -14,62 +14,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 194,
-						"h": 64
+						"w": 388,
+						"h": 128
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 194,
-						"h": 64
+						"w": 388,
+						"h": 128
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 194,
-						"h": 64
-					}
-				},
-				{
-					"filename": "musicOff",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 58,
-						"h": 58
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 58,
-						"h": 58
-					},
-					"frame": {
-						"x": 1,
-						"y": 67,
-						"w": 58,
-						"h": 58
-					}
-				},
-				{
-					"filename": "musicOn",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 58,
-						"h": 58
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 58,
-						"h": 58
-					},
-					"frame": {
-						"x": 61,
-						"y": 67,
-						"w": 58,
-						"h": 58
+						"w": 388,
+						"h": 128
 					}
 				},
 				{
@@ -77,20 +35,41 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 136,
-						"h": 57
+						"w": 272,
+						"h": 116
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 136,
-						"h": 57
+						"w": 272,
+						"h": 116
 					},
 					"frame": {
-						"x": 121,
-						"y": 67,
-						"w": 136,
-						"h": 57
+						"x": 1,
+						"y": 131,
+						"w": 272,
+						"h": 116
+					}
+				},
+				{
+					"filename": "button_back",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 116,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 116,
+						"h": 116
+					},
+					"frame": {
+						"x": 275,
+						"y": 131,
+						"w": 116,
+						"h": 116
 					}
 				},
 				{
@@ -98,83 +77,125 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 194,
-						"h": 64
+						"w": 388,
+						"h": 128
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 194,
-						"h": 64
+						"w": 388,
+						"h": 128
 					},
 					"frame": {
-						"x": 197,
+						"x": 391,
 						"y": 1,
-						"w": 194,
-						"h": 64
+						"w": 388,
+						"h": 128
+					}
+				},
+				{
+					"filename": "musicOff",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 116,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 116,
+						"h": 116
+					},
+					"frame": {
+						"x": 393,
+						"y": 131,
+						"w": 116,
+						"h": 116
+					}
+				},
+				{
+					"filename": "musicOn",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 116,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 116,
+						"h": 116
+					},
+					"frame": {
+						"x": 511,
+						"y": 131,
+						"w": 116,
+						"h": 116
 					}
 				},
 				{
 					"filename": "hp",
 					"rotated": false,
-					"trimmed": false,
+					"trimmed": true,
 					"sourceSize": {
-						"w": 56,
-						"h": 49
+						"w": 112,
+						"h": 100
 					},
 					"spriteSourceSize": {
 						"x": 0,
-						"y": 0,
-						"w": 56,
-						"h": 49
+						"y": 1,
+						"w": 112,
+						"h": 99
 					},
 					"frame": {
-						"x": 259,
-						"y": 67,
-						"w": 56,
-						"h": 49
+						"x": 629,
+						"y": 131,
+						"w": 112,
+						"h": 99
 					}
 				},
 				{
 					"filename": "not_hp",
 					"rotated": false,
-					"trimmed": false,
+					"trimmed": true,
 					"sourceSize": {
-						"w": 56,
-						"h": 49
+						"w": 112,
+						"h": 100
 					},
 					"spriteSourceSize": {
 						"x": 0,
-						"y": 0,
-						"w": 56,
-						"h": 49
+						"y": 1,
+						"w": 112,
+						"h": 99
 					},
 					"frame": {
-						"x": 317,
-						"y": 67,
-						"w": 56,
-						"h": 49
+						"x": 743,
+						"y": 131,
+						"w": 112,
+						"h": 99
 					}
 				},
 				{
 					"filename": "score_coin",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 43,
-						"h": 44
+						"w": 70,
+						"h": 70
 					},
 					"spriteSourceSize": {
-						"x": 3,
-						"y": 4,
-						"w": 37,
-						"h": 36
+						"x": 0,
+						"y": 0,
+						"w": 70,
+						"h": 70
 					},
 					"frame": {
-						"x": 375,
-						"y": 67,
-						"w": 37,
-						"h": 36
+						"x": 781,
+						"y": 1,
+						"w": 70,
+						"h": 70
 					}
 				}
 			]
@@ -183,6 +204,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:c9b2bd6e86def361b18a356b1a0bc71e:d7714a4645c2c5806958e15082fb2c03:ab754f880d04633e078d151ebb7d2401$"
+		"smartupdate": "$TexturePacker:SmartUpdate:3492e14a092a8eab160564e55e6389f9:6ae6ac3fd84fbff48cc59b3b054b0ebc:ab754f880d04633e078d151ebb7d2401$"
 	}
 }
