@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "player_dima_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 324,
+				"h": 200
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "player_dima_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 198
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 160,
+						"h": 198
+					}
+				},
+				{
+					"filename": "player_dima_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 198
+					},
+					"frame": {
+						"x": 163,
+						"y": 1,
+						"w": 160,
+						"h": 198
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:832ea421cfc8d8086595265f4c4576f6:85b97c1cbd0e82e0fb4f2f8b32efe9fb:49516e262586becc6ef4cfe7c464c0a4$"
+	}
+}
