@@ -4,51 +4,51 @@
 			"image": "player_dima_spritesheet.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 164,
-				"h": 102
+				"w": 324,
+				"h": 200
 			},
 			"scale": 1,
 			"frames": [
 				{
 					"filename": "player_dima_1",
 					"rotated": false,
-					"trimmed": false,
+					"trimmed": true,
 					"sourceSize": {
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 200
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 198
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 198
 					}
 				},
 				{
 					"filename": "player_dima_2",
 					"rotated": false,
-					"trimmed": false,
+					"trimmed": true,
 					"sourceSize": {
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 200
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 198
 					},
 					"frame": {
-						"x": 83,
+						"x": 163,
 						"y": 1,
-						"w": 80,
-						"h": 100
+						"w": 160,
+						"h": 198
 					}
 				}
 			]
@@ -57,6 +57,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:2e1a01dd3685a6c0c6f881b72a6f7b28:a2fbaad003382f0bdd960492b1b3fd71:49516e262586becc6ef4cfe7c464c0a4$"
+		"smartupdate": "$TexturePacker:SmartUpdate:832ea421cfc8d8086595265f4c4576f6:85b97c1cbd0e82e0fb4f2f8b32efe9fb:49516e262586becc6ef4cfe7c464c0a4$"
 	}
 }
