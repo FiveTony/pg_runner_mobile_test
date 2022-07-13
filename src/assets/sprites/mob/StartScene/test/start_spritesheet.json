@@ -1,0 +1,419 @@
+{
+	"textures": [
+		{
+			"image": "start_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1381,
+				"h": 1007
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "musya_text",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 244
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 588,
+						"h": 244
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 588,
+						"h": 244
+					}
+				},
+				{
+					"filename": "rita_text",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 244
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 588,
+						"h": 244
+					},
+					"frame": {
+						"x": 1,
+						"y": 247,
+						"w": 588,
+						"h": 244
+					}
+				},
+				{
+					"filename": "dima_text",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 245
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 0,
+						"w": 586,
+						"h": 245
+					},
+					"frame": {
+						"x": 591,
+						"y": 1,
+						"w": 586,
+						"h": 245
+					}
+				},
+				{
+					"filename": "dima_capture",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 404,
+						"h": 412
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 402,
+						"h": 411
+					},
+					"frame": {
+						"x": 1,
+						"y": 493,
+						"w": 402,
+						"h": 411
+					}
+				},
+				{
+					"filename": "musya_capture",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 404,
+						"h": 412
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 8,
+						"w": 403,
+						"h": 404
+					},
+					"frame": {
+						"x": 591,
+						"y": 248,
+						"w": 403,
+						"h": 404
+					}
+				},
+				{
+					"filename": "rita_capture",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 404,
+						"h": 412
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 11,
+						"w": 384,
+						"h": 401
+					},
+					"frame": {
+						"x": 996,
+						"y": 248,
+						"w": 384,
+						"h": 401
+					}
+				},
+				{
+					"filename": "dima_button",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 405,
+						"y": 654,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "dima_button_hover",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 405,
+						"y": 772,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "musya_button",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 405,
+						"y": 890,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "musya_button_hover",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 807,
+						"y": 654,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "rita_button",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 807,
+						"y": 772,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "rita_button_hover",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 116
+					},
+					"frame": {
+						"x": 807,
+						"y": 890,
+						"w": 400,
+						"h": 116
+					}
+				},
+				{
+					"filename": "musya_label",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 148,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 148,
+						"h": 64
+					},
+					"frame": {
+						"x": 1179,
+						"y": 1,
+						"w": 148,
+						"h": 64
+					}
+				},
+				{
+					"filename": "rita_label",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 148,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 148,
+						"h": 44
+					},
+					"frame": {
+						"x": 405,
+						"y": 493,
+						"w": 148,
+						"h": 44
+					}
+				},
+				{
+					"filename": "dima_label",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 144,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 144,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 906,
+						"w": 144,
+						"h": 44
+					}
+				},
+				{
+					"filename": "dima_slider",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 124,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 124,
+						"h": 24
+					},
+					"frame": {
+						"x": 1179,
+						"y": 67,
+						"w": 124,
+						"h": 24
+					}
+				},
+				{
+					"filename": "musya_slider",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 124,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 124,
+						"h": 24
+					},
+					"frame": {
+						"x": 405,
+						"y": 539,
+						"w": 124,
+						"h": 24
+					}
+				},
+				{
+					"filename": "rita_slider",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 124,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 124,
+						"h": 24
+					},
+					"frame": {
+						"x": 1,
+						"y": 952,
+						"w": 124,
+						"h": 24
+					}
+				},
+				{
+					"filename": "arrow",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 1179,
+						"y": 93,
+						"w": 72,
+						"h": 72
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:5f10e25438395ec12f2a6ccfe0d2fb72:bb14d42ad2c2a05750a1d0a0365b0045:db01ffb4e73e69bf681799da5f643e09$"
+	}
+}
