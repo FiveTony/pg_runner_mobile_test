@@ -13,7 +13,7 @@ const WIDTH = 1000
 const HEIGHT = 1600
 
 const GAME_VELOCITY_START = 5
-const GAME_VELOCITY_STEP = 0
+const GAME_VELOCITY_STEP = 1
 
 const SWIPE_POWER = 60
 
@@ -48,8 +48,8 @@ export default class GameScene extends Phaser.Scene {
 
   }
   preload() {
-    this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
-    this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
+    // this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
+    // this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
     // this.load.image("left_element", "src/assets/sprites/mob/left_element2.jpg");
     // this.load.image("right_element", "src/assets/sprites/mob/right_element2.jpg");
 
@@ -59,15 +59,15 @@ export default class GameScene extends Phaser.Scene {
     // this.load.image("room4", "src/assets/sprites/mob/rooms/jpg/room4.jpg");
     // this.load.image("room5", "src/assets/sprites/mob/rooms/jpg/room5.jpg");
 
-    this.load.image("room1", "src/assets/sprites/mob/rooms/room1.png");
-    this.load.image("room2", "src/assets/sprites/mob/rooms/room2.png");
-    this.load.image("room3", "src/assets/sprites/mob/rooms/room3.png");
-    this.load.image("room4", "src/assets/sprites/mob/rooms/room4.png");
-    this.load.image("room5", "src/assets/sprites/mob/rooms/room5.png");
+    // this.load.image("room1", "src/assets/sprites/mob/rooms/room1.png");
+    // this.load.image("room2", "src/assets/sprites/mob/rooms/room2.png");
+    // this.load.image("room3", "src/assets/sprites/mob/rooms/room3.png");
+    // this.load.image("room4", "src/assets/sprites/mob/rooms/room4.png");
+    // this.load.image("room5", "src/assets/sprites/mob/rooms/room5.png");
   }
   create() {
-    this.version = 1.1
-    // this.physics.world.setFPS(60) // 
+    this.version = 1.4
+    this.physics.world.setFPS(60) // 
     // this.cameras.main.setRoundPixels(true)
     // this.physics.world.setBounds(0 , 0, WIDTH, HEIGHT, false, false, false, true)
     // console.log(this.physics)
@@ -105,7 +105,7 @@ export default class GameScene extends Phaser.Scene {
       `player_${this.hero}_1`,{"playerScale": 1, hero: this.hero})
 
       this.button_back = this.add.sprite(80, HEIGHT - 100, "ui_spritesheet","button_back").setInteractive()
-      // .once("pointerdown", ()=> this.defeat())
+      .once("pointerdown", ()=> this.defeat())
       
       this.start_button = this.add.sprite(WIDTH / 2, HEIGHT / 2 + 700, "ui_spritesheet", "start")
         .setInteractive()
@@ -124,19 +124,23 @@ export default class GameScene extends Phaser.Scene {
         targets: this.start_button,
         alpha: {
           from: 1,
-          to: 0.7
+          to: 0.75
         },
-        angle: {
-          from: -7,
-          to: 7
+        scale: {
+          from: 1,
+          to: 0.92
         },
+        // angle: {
+        //   from: -7,
+        //   to: 7
+        // },
         repeat: -1,
         ease: "Linear",
         yoyo: true,
         duration: 800,
-        onComplete: function () {
-          this.start_button.alpha = 1;
-        },
+        // onComplete: function () {
+        //   this.start_button.alpha = 1;
+        // },
       });
 
     this.border = new Borders(this)
@@ -157,14 +161,14 @@ export default class GameScene extends Phaser.Scene {
     // this.my_flag2 = false
 
     this.fps = this.game.loop.actualFps
-    this.fps_text = this.add.bitmapText(WIDTH / 2, HEIGHT / 2 + 300, 'Montserrat-Bold', `${this.fps}`, 60)
-    this.version_text = this.add.bitmapText(WIDTH / 2 + 100, HEIGHT / 2 + 350, 'Montserrat-Bold', `${this.version}`, 60)
+    // this.fps_text = this.add.bitmapText(WIDTH / 2, HEIGHT / 2 + 300, 'Montserrat-Bold', `${this.fps}`, 60)
+    // this.version_text = this.add.bitmapText(WIDTH / 2, HEIGHT / 2 + 350, 'Montserrat-Bold', `${this.version}`, 60)
   }
   update(timestep, dt) {
     this.left_element.tilePositionY -= this.game_velocity
     this.right_element.tilePositionY -= this.game_velocity
 
-    this.fps_text.setText(`${this.game.loop.actualFps}`)
+    // this.fps_text.setText(`${this.game.loop.actualFps}`)
 
     // this.left_element1.y += this.game_velocity
     // this.left_element2.y += this.game_velocity
@@ -464,25 +468,25 @@ export default class GameScene extends Phaser.Scene {
   }
   onMusic() {
     this.ui.sound.on("pointerdown", () => {
-      console.log("EVENTS ", this.events.eventNames())
-      console.log("UPDATE ",this.events.listenerCount("update"))
-      console.log("LEAVE ",this.events.listenerCount("leave"))
-      console.log("start", this.events.listeners("start"))
-      console.log("destroy", this.events.listeners("destroy"))
-      console.log("shutdown", this.events.listeners("shutdown"))
-      console.log("update", this.events.listeners("update"))
-      console.log("preupdate", this.events.listeners("preupdate"))
-      console.log("transitionstart", this.events.listeners("transitionstart"))
-      console.log("transitionout", this.events.listeners("transitionout"))
-      console.log("pause", this.events.listeners("pause"))
-      console.log("sleep", this.events.listeners( "sleep"))
-      console.log("pause", this.events.listeners("pause"))
-      console.log("postupdate", this.events.listeners("postupdate"))
-      console.log("leave", this.events.listeners("leave"))
-      console.log("SCENES ", this.scene.manager.scenes)
+      // console.log("EVENTS ", this.events.eventNames())
+      // console.log("UPDATE ",this.events.listenerCount("update"))
+      // console.log("LEAVE ",this.events.listenerCount("leave"))
+      // console.log("start", this.events.listeners("start"))
+      // console.log("destroy", this.events.listeners("destroy"))
+      // console.log("shutdown", this.events.listeners("shutdown"))
+      // console.log("update", this.events.listeners("update"))
+      // console.log("preupdate", this.events.listeners("preupdate"))
+      // console.log("transitionstart", this.events.listeners("transitionstart"))
+      // console.log("transitionout", this.events.listeners("transitionout"))
+      // console.log("pause", this.events.listeners("pause"))
+      // console.log("sleep", this.events.listeners( "sleep"))
+      // console.log("pause", this.events.listeners("pause"))
+      // console.log("postupdate", this.events.listeners("postupdate"))
+      // console.log("leave", this.events.listeners("leave"))
+      // console.log("SCENES ", this.scene.manager.scenes)
 
-      console.log(window)
-      console.log(this.children.getAll())
+      // console.log(window)
+      // console.log(this.children.getAll())
       if (this.mute == false) {
         this.ui.sound.setFrame("musicOff");
         this.mute = true;
@@ -510,8 +514,8 @@ export default class GameScene extends Phaser.Scene {
     });
   }
   defeat() {
-    // this.game.scene.add('Start', StartScene, true, {mute: this.mute});
-    // this.scene.remove("Game")
+    this.game.scene.add('Start', StartScene, true, {mute: this.mute});
+    this.scene.remove("Game")
   }
   // createSideElement() {
   //   console.log("createSideElement()")

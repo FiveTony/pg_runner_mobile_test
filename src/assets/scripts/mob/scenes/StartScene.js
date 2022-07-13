@@ -1,10 +1,10 @@
-const WIDTH = 500
-const HEIGHT = 800
+const WIDTH = 1000
+const HEIGHT = 1600
 const SWIPE_POWER = 30
 
-const LEFT = 72
-const CENTER = - 72 - 356
-const RIGHT = - 72 - 356 - 72 - 356 - 72
+const LEFT = 72 * 2
+const CENTER = (- 72 - 356) * 2
+const RIGHT = (- 72 - 356 - 72 - 356 - 72) * 2
 
 
 import GameScene from "./GameScene";
@@ -30,8 +30,8 @@ export default class StartScene extends Phaser.Scene {
       .fillRect(0, 0, WIDTH, HEIGHT);
     // this.add.circle(220, HEIGHT / 2, 720, 0x00348E, 0.84)
 
-    this.add.text(WIDTH / 2, 86, "Выбери своего\nперсонажа", {
-      font: 'bold 40px Montserrat',
+    this.add.text(WIDTH / 2, 86 * 2, "Выбери своего\nперсонажа", {
+      font: 'bold 80px Montserrat',
       fill: '#FFFFFF',
       align: 'center',  // 'left'|'center'|'right'|'justify'
       lineSpacing: 10,
@@ -41,7 +41,7 @@ export default class StartScene extends Phaser.Scene {
     let sound_sprite
     !this.mute ? sound_sprite = "musicOn" : sound_sprite = "musicOff"
 
-    this.sound_toggle = this.add.sprite(WIDTH - 40, 40, "ui_spritesheet", sound_sprite).setScale(0.9).setInteractive()
+    this.sound_toggle = this.add.sprite(WIDTH - 40* 2, 40* 2, "ui_spritesheet", sound_sprite).setScale(0.9).setInteractive()
       .on("pointerdown", () => { 
         if (this.mute == false) {
           this.sound_toggle.setFrame("musicOff");
@@ -163,47 +163,59 @@ export default class StartScene extends Phaser.Scene {
     }
   }
   createCharacters() {
-    this.big_container = this.add.container(72, 162)
+    this.big_container = this.add.container(72 * 2, 162 * 2)
 
     let container1 = this.add.container(0, 0)
     let graphics1 = this.add.graphics()
     .fillStyle(0x002F81, 1)
-    .fillRoundedRect(0, 0, 356, 586, 10)
-    let rita_label = this.add.sprite(356 / 2, 36, "rita_label").setOrigin(0.5)
-    let rita_capture = this.add.sprite(356 / 2 - 10, 170, "rita_capture").setOrigin(0.5)
-    let rita_text = this.add.sprite(356 / 2, 360, "rita_text").setOrigin(0.5)
-    let rita_button = this.add.sprite(356 / 2, 470, "rita_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("rita"))
-    let rita_right_arrow = this.add.sprite(356 / 2 + 140, 170, "arrow").setOrigin(0.5).setInteractive().on("pointerdown", ()=>this.rightMove())
-    let rita_slider = this.add.sprite(356 / 2, 570, "rita_slider").setOrigin(0.5)
+    .fillRoundedRect(0, 0, 356* 2, 586* 2, 10)
+    let rita_label = this.add.sprite(356 / 2* 2, 36* 2,"start_spritesheet", "rita_label").setOrigin(0.5)
+    let rita_capture = this.add.sprite((356 / 2 - 10)* 2, 170* 2, "start_spritesheet", "rita_capture").setOrigin(0.5)
+    let rita_text = this.add.sprite(356 / 2 * 2, 360 * 2, "start_spritesheet", "rita_text").setOrigin(0.5)
+    let rita_button = this.add.sprite(356 / 2 * 2, 470 * 2, "start_spritesheet", "rita_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("rita"))
+    let rita_right_arrow = this.add.sprite((356 / 2 + 140) * 2, 170 * 2,"start_spritesheet",  "arrow").setOrigin(0.5).setInteractive().on("pointerdown", ()=>this.rightMove())
+    let rita_slider = this.add.sprite(356 / 2 * 2, 570 * 2,"start_spritesheet",  "rita_slider").setOrigin(0.5)
     container1.add([graphics1, rita_label, rita_capture, rita_text, rita_button, rita_right_arrow, rita_slider])
 
-    let container2 = this.add.container(356 + 72 + 72, 0)
+    let container2 = this.add.container((356 + 72 + 72)* 2, 0)
     let graphics2 = this.add.graphics()
     .fillStyle(0x002F81, 1)
-    .fillRoundedRect(0, 0, 356, 586, 10)
-    let dima_label = this.add.sprite(356 / 2, 36, "dima_label").setOrigin(0.5)
-    let dima_capture = this.add.sprite(356 / 2, 170, "dima_capture").setOrigin(0.5)
-    let dima_text = this.add.sprite(356 / 2, 360, "dima_text").setOrigin(0.5)
-    let dima_button = this.add.sprite(356 / 2, 470, "dima_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("dima"))
-    let dima_left_arrow = this.add.sprite(356 / 2 - 140, 170, "arrow").setOrigin(0.5).setAngle(180).setInteractive().on("pointerdown", ()=>this.leftMove())
-    let dima_right_arrow = this.add.sprite(356 / 2 + 140, 170, "arrow").setOrigin(0.5).setInteractive().on("pointerdown", ()=>this.rightMove())
-    let dima_slider = this.add.sprite(356 / 2, 570, "dima_slider").setOrigin(0.5)
+    .fillRoundedRect(0, 0, 356 * 2, 586 * 2, 10)
+    let dima_label = this.add.sprite(356 / 2 * 2, 36* 2,"start_spritesheet",  "dima_label").setOrigin(0.5)
+    let dima_capture = this.add.sprite(356 / 2* 2, 170* 2, "start_spritesheet", "dima_capture").setOrigin(0.5)
+    let dima_text = this.add.sprite(356 / 2* 2, 360* 2, "start_spritesheet", "dima_text").setOrigin(0.5)
+    let dima_button = this.add.sprite(356 / 2* 2, 470* 2, "start_spritesheet", "dima_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("dima"))
+    let dima_left_arrow = this.add.sprite((356 / 2 - 140) * 2, 170* 2, "start_spritesheet", "arrow").setOrigin(0.5).setAngle(180).setInteractive().on("pointerdown", ()=>this.leftMove())
+    let dima_right_arrow = this.add.sprite((356 / 2 + 140) * 2, 170* 2,"start_spritesheet",  "arrow").setOrigin(0.5).setInteractive().on("pointerdown", ()=>this.rightMove())
+    let dima_slider = this.add.sprite(356 / 2* 2, 570* 2,"start_spritesheet",  "dima_slider").setOrigin(0.5)
     container2.add([graphics2, dima_label, dima_capture, dima_text, dima_button, dima_left_arrow, dima_right_arrow, dima_slider])
 
-    let container3 = this.add.container(356 + 72 + 72 + 356 + 72 + 72, 0)
+    let container3 = this.add.container((356 + 72 + 72 + 356 + 72 + 72) * 2, 0)
     let graphics3 = this.add.graphics()
     .fillStyle(0x002F81, 1)
-    .fillRoundedRect(0, 0, 356, 586, 10)
-    let musya_label = this.add.sprite(356 / 2, 36, "musya_label").setOrigin(0.5)
-    let musya_capture = this.add.sprite(356 / 2, 170, "musya_capture").setOrigin(0.5)
-    let musya_text = this.add.sprite(356 / 2, 360, "musya_text").setOrigin(0.5)
-    let musya_button = this.add.sprite(356 / 2, 470, "musya_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("musya"))
+    .fillRoundedRect(0, 0, 356 * 2, 586 * 2, 10)
+    let musya_label = this.add.sprite(356 / 2* 2, 36* 2,"start_spritesheet",  "musya_label").setOrigin(0.5)
+    let musya_capture = this.add.sprite(356 / 2* 2, 170* 2, "start_spritesheet", "musya_capture").setOrigin(0.5)
+    let musya_text = this.add.sprite(356 / 2* 2, 360* 2,"start_spritesheet",  "musya_text").setOrigin(0.5)
+    let musya_button = this.add.sprite(356 / 2* 2, 470* 2, "start_spritesheet", "musya_button").setOrigin(0.5).setInteractive().on("pointerdown", () => this.launchGame("musya"))
 
-    let musya_left_arrow = this.add.sprite(356 / 2 - 140, 170, "arrow").setOrigin(0.5).setAngle(180).setInteractive().on("pointerdown", ()=>this.leftMove())
-    let musya_slider = this.add.sprite(356 / 2, 570, "musya_slider").setOrigin(0.5)
+    let musya_left_arrow = this.add.sprite((356 / 2 - 140)* 2, 170* 2, "start_spritesheet", "arrow").setOrigin(0.5).setAngle(180).setInteractive().on("pointerdown", ()=>this.leftMove())
+    let musya_slider = this.add.sprite(356 / 2* 2, 570* 2, "start_spritesheet", "musya_slider").setOrigin(0.5)
     container3.add([graphics3, musya_label, musya_capture, musya_text, musya_button, musya_left_arrow, musya_slider])
 
     this.big_container.add([container1, container2, container3])
+
+    this.tweens.add({
+      targets: [rita_button, dima_button, musya_button],
+      scale : {
+        from : 1,
+        to: 0.95
+      },
+      ease: "Linear",
+      yoyo: true,
+      duration: 800,
+      repeat: -1
+    });
   }
 
 }

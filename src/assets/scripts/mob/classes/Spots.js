@@ -5,12 +5,34 @@ const X_1 = 300
 const X_2 = 500
 const X_3 = 700
 
+const X = [X_1, X_2, X_2,   X_2, X_1, X_3,  X_1, X_3, X_3,  X_3, X_3, X_1,  X_3, X_1, X_1]
+const Y = [
+-300,
+-920,
+-1800,
+
+-720,
+-1200,
+-2000,
+
+-1500,
+-500,
+-940,
+
+-320,
+-1360,
+-1580,
+
+-520,
+-800,
+-1600]
+
 const DATA = [
     [X_1, -300],
     [X_2, -920],
     [X_2, -1800],
 
-    [X_2, -720],
+    [X_2, -1120],
     [X_1, -1200],
     [X_3, -2000],
     
@@ -66,7 +88,7 @@ export default class Spots extends Phaser.Physics.Arcade.Group {
         this.add(elem_3)
 
         let data_4 = DATA[3]
-        let elem_4 = new Spot(this.scene, X_2, -1520, 'positive_spritesheet', 'spot_1')
+        let elem_4 = new Spot(this.scene, X_2, -1120, 'positive_spritesheet', 'spot_2')
         elem_4.move()
         this.add(elem_4)
 
@@ -83,14 +105,17 @@ export default class Spots extends Phaser.Physics.Arcade.Group {
         this.count_created = 6
     }
     createSpot() {
-        let data = DATA[this.count_created]
+        // let data = DATA[this.count_created]
+        let x = X[this.count_created]
+        let y = Y[this.count_created]
+        let sprite = `spot_${Phaser.Math.Between(1, 2)}`
         let elem = this.getFirstDead()
         // if (!elem) {
         //     console.log("!elem________")
         //     elem = new Spot(this.scene, data[0], data[1], data[2])
         // } else 
         // let num = Phaser.Math.Between(1, 2)
-        elem.reset(data[0], data[1], `spot_${Phaser.Math.Between(1, 2)}`)
+        elem.reset(x, y, sprite)
         
         this.count_created++
         }
