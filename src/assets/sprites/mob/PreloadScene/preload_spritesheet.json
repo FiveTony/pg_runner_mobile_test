@@ -4,7 +4,7 @@
 			"image": "preload_spritesheet.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1495,
+				"w": 1508,
 				"h": 1922
 			},
 			"scale": 1,
@@ -33,22 +33,22 @@
 				{
 					"filename": "circle",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 244,
-						"h": 252
+						"w": 250,
+						"h": 258
 					},
 					"spriteSourceSize": {
-						"x": 1,
+						"x": 0,
 						"y": 0,
-						"w": 243,
-						"h": 252
+						"w": 250,
+						"h": 258
 					},
 					"frame": {
 						"x": 1083,
 						"y": 1,
-						"w": 243,
-						"h": 252
+						"w": 250,
+						"h": 258
 					}
 				},
 				{
@@ -56,20 +56,20 @@
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 440,
-						"h": 188
+						"w": 436,
+						"h": 198
 					},
 					"spriteSourceSize": {
-						"x": 20,
-						"y": 2,
-						"w": 411,
-						"h": 181
+						"x": 7,
+						"y": 3,
+						"w": 424,
+						"h": 188
 					},
 					"frame": {
 						"x": 1083,
-						"y": 255,
-						"w": 411,
-						"h": 181
+						"y": 261,
+						"w": 424,
+						"h": 188
 					}
 				}
 			]
@@ -78,6 +78,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:da6c0be8ad0ddf3e2fcfcf6c3e7eea01:d28f33c08101a4d28811a1b7d5b6f4b4:a6f760185e912fbced447caa5e076458$"
+		"smartupdate": "$TexturePacker:SmartUpdate:9fdca71768866ba6417cd70d0d6b4351:9d492f6714bfc2e2f9019903f84c4852:a6f760185e912fbced447caa5e076458$"
 	}
 }
