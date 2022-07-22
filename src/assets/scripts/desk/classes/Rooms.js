@@ -1,4 +1,4 @@
-import Room from "./Room"
+import Room from "@assets/scripts/desk/classes/Room.js"
 
 const BG_WIDTH = 900
 const BG_HEIGHT = 2880

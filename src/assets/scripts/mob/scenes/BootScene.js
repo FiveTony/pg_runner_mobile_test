@@ -1,3 +1,6 @@
+const WIDTH = 1080
+const HEIGHT = 1920
+
 export default class BootScene extends Phaser.Scene {
   constructor() {
     super("Boot");
@@ -11,9 +14,12 @@ export default class BootScene extends Phaser.Scene {
       "preload_spritesheet", "src/assets/sprites/mob/PreloadScene/preload_spritesheet.png", 
       "src/assets/sprites/mob/PreloadScene/preload_spritesheet.json");
     
-    this.load.audio("main_theme", "src/assets/sounds/main_theme.mp3");
+    // this.load.audio("main_theme", "assets/sounds/main_theme.mp3");
     this.load.bitmapFont('Montserrat-Bold', 'src/assets/fonts/Montserrat-Bold.png', 'src/assets/fonts/Montserrat-Bold.xml');
 
+    let preload_graphics = this.add.graphics()
+      .fillGradientStyle(0x062A67,0x062A67,0x1A499B, 0x1A499B, 1)
+      .fillRect(0, 0, WIDTH, HEIGHT);
   }
   create() {
     this.scene.start("Preload");

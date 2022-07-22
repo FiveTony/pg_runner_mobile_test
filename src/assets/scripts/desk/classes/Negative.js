@@ -6,7 +6,7 @@ const DATA = [
     [1220, -1660, 'room1_2'],
     [1270, -2460, 'room1_3'],
     
-    [700, -670, 'room2_1'],
+    [960, -670, 'room2_1'],
     [1220, -1350, 'room2_2'],
     [700, -2300, 'room2_3'],
 
@@ -18,8 +18,8 @@ const DATA = [
     [692, -1800, 'room4_2'],
     [703, -2500, 'room4_3'],
 
-    [1260, -300, 'room5_1'],
-    [690, -1300, 'room5_2'],
+    [960, -560, 'room5_1'],
+    [690, -1480, 'room5_2'],
     [1250, -2120, 'room5_3'],
 ]
 
@@ -59,7 +59,7 @@ export default class Negative extends Phaser.Physics.Arcade.Group {
         this.add(elem_3)
 
         let data_4 = DATA[3]
-        let elem_4 = new NegativeObject(this.scene, 700, -2470, 'negative_spritesheet', 'room2_1')
+        let elem_4 = new NegativeObject(this.scene, 960, -2470, 'negative_spritesheet', 'room2_1')
         elem_4.move()
         this.add(elem_4)
 
@@ -101,8 +101,8 @@ class NegativeObject extends Phaser.GameObjects.Sprite {
         this.body.enable = true
         this.alive_status = true
     
-        this.body.height = this.height
-        this.body.width = this.width
+        this.body.height = this.height - 20
+        this.body.width = this.width - 20
         this.scene.events.on('update', this.update, this)
         this.scene.events.on('start_game', this.move, this)
         this.scene.events.on('leave', this.move, this)
@@ -124,8 +124,8 @@ class NegativeObject extends Phaser.GameObjects.Sprite {
         this.y = y
         this.setFrame(frame)
         this.setAlive(true)
-        this.body.width = this.width
-        this.body.height = this.height
+        this.body.width = this.width - 40
+        this.body.height = this.height - 40
 
         // this.scene.children.bringToTop(this)
         

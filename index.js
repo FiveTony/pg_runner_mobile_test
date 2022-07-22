@@ -4,72 +4,9 @@ import device from "current-device";
 import BootSceneMob from "./src/assets/scripts/mob/scenes/BootScene";
 import PreloadSceneMob from "./src/assets/scripts/mob/scenes/PreloadScene";
 
-import BootSceneDesk from "./src/assets/scripts/desk/scenes/BootScene";
-import PreloadSceneDesk from "./src/assets/scripts/desk/scenes/PreloadScene";
+// import BootSceneDesk from "./src/assets/scripts/desk/scenes/BootScene";
+// import PreloadSceneDesk from "./src/assets/scripts/desk/scenes/PreloadScene";
 
-
-
-
-
-
-class TestScene extends Phaser.Scene {
-    constructor() {
-      super("Test");
-      console.log("TestScene")
-    }
-    preload() {
-      this.load.atlas(
-        "ui_spritesheet", "src/assets/sprites/mob/ui/ui_spritesheet.png", 
-        "src/assets/sprites/mob/ui/ui_spritesheet.json");
-      }
-    create() {
-      this.button = this.add.sprite(500, 800, "ui_spritesheet", "start").setAlpha(0)
-      // this.button.flipX = true
-
-      this.tweens.add({
-        targets: this.button,
-        alpha : {
-          from : 0,
-          to: 1,
-          // duration: 200
-        },
-
-        scale: {
-          from: 1.2,
-          to: 1,
-          
-        },
-
-        x: {
-          duration: 400,
-          yoyo: true,
-          repeat: 8,
-          ease: 'Sine.easeInOut',
-          value: {
-              getActive: function (target, key, value, targetIndex, totalTargets, tween)
-              {
-                  return value;
-              },
-              getStart: function (target, key, value, targetIndex, totalTargets, tween)
-              {
-                  return value + 30;
-              },
-              getEnd: function (target, key, value, targetIndex, totalTargets, tween)
-              {
-                  value -= 30;
-                  return value;
-              }
-          }
-      },
-
-        ease: "Linear",
-        duration: 1000
-      });
-    }
-  }
-  // var scenes = [
-  //   TestScene
-  // ];
 
 
 
@@ -87,8 +24,8 @@ class TestScene extends Phaser.Scene {
 
   var config = {
     type: Phaser.AUTO,
-    width: 1000,
-    height: 1600,
+    width: 1080,
+    height: 1920,
     scene: scenes,
     scale: {
       mode: Phaser.Scale.FIT,

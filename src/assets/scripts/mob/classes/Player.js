@@ -1,6 +1,6 @@
-const LEFT = 300
-const CENTER = 500
-const RIGHT = 700
+const LEFT = 340
+const CENTER = 540
+const RIGHT = 740
 
 export default class Player extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, frame, config) {

@@ -1,4 +1,4 @@
-import StartScene from "./StartScene";
+import StartScene from "@assets/scripts/desk/scenes/StartScene.js";
 
 const WIDTH = 1920
 const HEIGHT = 1080
@@ -9,10 +9,10 @@ export default class PreloadScene extends Phaser.Scene {
     console.log("PreloadScene")
   }
   preload() {
-    
+    document.querySelector('body').classList.add('bg-dark-color');
     this.main_theme = this.sound.add("main_theme", {
       mute: false,
-      volume: 0.8,
+      volume: 0.4,
       rate: 1,
       detune: 0,
       seek: 0,
@@ -38,36 +38,36 @@ export default class PreloadScene extends Phaser.Scene {
     });
   }
   create() {
-  this.game.scene.add('Start', StartScene, true, {mute: false});
-  // this.scene.start("Start");
+    document.querySelector('body').classList.remove('bg-dark-color');
+    this.game.scene.add('Start', StartScene, true, {play_num: 1, mute: false});
   }
   preloadAssets() {
-    this.load.audio("get_positive", "src/assets/sounds/get_positive.mp3");
-    this.load.audio("get_negative", "src/assets/sounds/get_negative.mp3");
-    this.load.audio("get_negative_musya", "src/assets/sounds/get_negative_musya.mp3");
-    this.load.audio("win", "src/assets/sounds/win.mp3");
-    this.load.audio("swipe_sound", "src/assets/sounds/swipe.mp3");
+    this.load.audio("get_positive", "assets/sounds/get_positive.mp3");
+    this.load.audio("get_negative", "assets/sounds/get_negative.mp3");
+    this.load.audio("get_negative_musya", "assets/sounds/get_negative_musya.mp3");
+    this.load.audio("win", "assets/sounds/win.mp3");
+    this.load.audio("swipe_sound", "assets/sounds/swipe.mp3");
 
     
-    this.load.image("border", "src/assets/sprites/desk/border.png");
+    this.load.image("border", "assets/sprites/desk/border.png");
 
     this.load.atlas(
-      "ui_spritesheet", "src/assets/sprites/desk/ui/ui_spritesheet.png", 
-      "src/assets/sprites/desk/ui/ui_spritesheet.json");
+      "ui_spritesheet", "assets/sprites/desk/ui/ui_spritesheet.png", 
+      "assets/sprites/desk/ui/ui_spritesheet.json");
 
-    this.load.image("start", "src/assets/sprites/desk/button.png");
-    this.load.image("start_hover", "src/assets/sprites/desk/button_blue.png");
+    this.load.image("start", "assets/sprites/desk/button.png");
+    this.load.image("start_hover", "assets/sprites/desk/button_blue.png");
 
 
     this.load.atlas(
-      "prompts_spritesheet", "src/assets/sprites/desk/prompts_spritesheet.png", 
-      "src/assets/sprites/desk/prompts_spritesheet.json");
+      "prompts_spritesheet", "assets/sprites/desk/prompts_spritesheet.png", 
+      "assets/sprites/desk/prompts_spritesheet.json");
     
       
-    this.load.image("left_element", "src/assets/sprites/desk/left_element.jpg");
-    this.load.image("right_element", "src/assets/sprites/desk/right_element.jpg");
+    this.load.image("left_element", "assets/sprites/desk/left_element.jpg");
+    this.load.image("right_element", "assets/sprites/desk/right_element.jpg");
 
-    this.load.image("button_back", "src/assets/sprites/desk/button_back.png");
+    this.load.image("button_back", "assets/sprites/desk/button_back.png");
 
 
     this.preloadStartScene()
@@ -77,54 +77,54 @@ export default class PreloadScene extends Phaser.Scene {
 
   }
   preloadPlayers() {
-    this.load.image("player_rita_1", "src/assets/sprites/desk/player/player_rita_1.png");
+    this.load.image("player_rita_1", "assets/sprites/desk/player/player_rita_1.png");
     this.load.atlas(
-      "player_rita", "src/assets/sprites/desk/player/player_rita.png", 
-      "src/assets/sprites/desk/player/player_rita.json");
+      "player_rita", "assets/sprites/desk/player/player_rita.png", 
+      "assets/sprites/desk/player/player_rita.json");
 
-    this.load.image("player_musya_1", "src/assets/sprites/desk/player/player_musya_1.png");
+    this.load.image("player_musya_1", "assets/sprites/desk/player/player_musya_1.png");
     this.load.atlas(
-      "player_musya", "src/assets/sprites/desk/player/player_musya.png", 
-      "src/assets/sprites/desk/player/player_musya.json");
+      "player_musya", "assets/sprites/desk/player/player_musya.png", 
+      "assets/sprites/desk/player/player_musya.json");
 
-    this.load.image("player_dima_1", "src/assets/sprites/desk/player/player_dima_1.png");
+    this.load.image("player_dima_1", "assets/sprites/desk/player/player_dima_1.png");
     this.load.atlas(
-      "player_dima", "src/assets/sprites/desk/player/player_dima.png", 
-      "src/assets/sprites/desk/player/player_dima.json");
+      "player_dima", "assets/sprites/desk/player/player_dima.png", 
+      "assets/sprites/desk/player/player_dima.json");
   }
   preloadStartScene() {
     this.load.atlas(
-      "charactersChoose", "src/assets/sprites/desk/StartScene/charactersChoose.png", 
-      "src/assets/sprites/desk/StartScene/charactersChoose.json");
+      "start_spritesheet", "assets/sprites/desk/StartScene/start_spritesheet.png", 
+      "assets/sprites/desk/StartScene/start_spritesheet.json");
 
-    this.load.image("rita_button_hover", "src/assets/sprites/desk/StartScene/rita_button_hover.png");
-    this.load.image("dima_button_hover", "src/assets/sprites/desk/StartScene/dima_button_hover.png");
-    this.load.image("musya_button_hover", "src/assets/sprites/desk/StartScene/musya_button_hover.png");
+    // this.load.image("rita_button_hover", "assets/sprites/desk/StartScene/rita_button_hover.png");
+    // this.load.image("dima_button_hover", "assets/sprites/desk/StartScene/dima_button_hover.png");
+    // this.load.image("musya_button_hover", "assets/sprites/desk/StartScene/musya_button_hover.png");
     
-    this.load.image("rita_button", "src/assets/sprites/desk/StartScene/rita_button.png");
-    this.load.image("dima_button", "src/assets/sprites/desk/StartScene/dima_button.png");
-    this.load.image("musya_button", "src/assets/sprites/desk/StartScene/musya_button.png");
+    // this.load.image("rita_button", "assets/sprites/desk/StartScene/rita_button.png");
+    // this.load.image("dima_button", "assets/sprites/desk/StartScene/dima_button.png");
+    // this.load.image("musya_button", "assets/sprites/desk/StartScene/musya_button.png");
 
   }
   preloadRooms() {
-    this.load.image("room1", "src/assets/sprites/desk/rooms/room1.jpg");
-    this.load.image("room2", "src/assets/sprites/desk/rooms/room2.jpg");
-    this.load.image("room3", "src/assets/sprites/desk/rooms/room3.jpg");
-    this.load.image("room4", "src/assets/sprites/desk/rooms/room4.jpg");
-    this.load.image("room5", "src/assets/sprites/desk/rooms/room5.jpg");
+    this.load.image("room1", "assets/sprites/desk/rooms/room1.jpg");
+    this.load.image("room2", "assets/sprites/desk/rooms/room2.jpg");
+    this.load.image("room3", "assets/sprites/desk/rooms/room3.jpg");
+    this.load.image("room4", "assets/sprites/desk/rooms/room4.jpg");
+    this.load.image("room5", "assets/sprites/desk/rooms/room5.jpg");
 
     // this.load.atlas(
-    //   "rooms", "src/assets/sprites/desk/rooms/rooms_spritesheet.png", 
-    //   "src/assets/sprites/desk/rooms/rooms_spritesheet.json");
+    //   "rooms", "assets/sprites/desk/rooms/rooms_spritesheet.png", 
+    //   "assets/sprites/desk/rooms/rooms_spritesheet.json");
   }
   preloadNegativePositive() {
     this.load.atlas(
-      "negative_spritesheet", "src/assets/sprites/desk/negative/negative_spritesheet.png", 
-      "src/assets/sprites/desk/negative/negative_spritesheet.json");
+      "negative_spritesheet", "assets/sprites/desk/negative/negative_spritesheet.png", 
+      "assets/sprites/desk/negative/negative_spritesheet.json");
 
     this.load.atlas(
-      "positive_spritesheet", "src/assets/sprites/desk/positive/positive_spritesheet.png", 
-      "src/assets/sprites/desk/positive/positive_spritesheet.json");
+      "positive_spritesheet", "assets/sprites/desk/positive/positive_spritesheet.png", 
+      "assets/sprites/desk/positive/positive_spritesheet.json");
   }
   createElements() {
   let preload_graphics = this.add.graphics()
@@ -132,7 +132,7 @@ export default class PreloadScene extends Phaser.Scene {
     .fillRect(0, 0, WIDTH, HEIGHT);
 
   let preload_text = this.add.text(WIDTH / 2, 235, "Подумай о хорошем,\nпока ждёшь 😊", {
-      font: '76px Monserrat-Bold',
+      font: 'bold 76px Monserrat',
       fill: '#FFFFFF',
       align: 'center',  // 'left'|'center'|'right'|'justify'
       lineSpacing: 20,

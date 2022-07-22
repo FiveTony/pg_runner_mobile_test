@@ -1,7 +1,7 @@
 const BG_HEIGHT = 2200
 
-const WIDTH = 1000
-const HEIGHT = 1600
+const WIDTH = 1080
+const HEIGHT = 1920
 
 const LEFT_X = WIDTH / 2 - 206
 const RIGHT_X = WIDTH / 2 + 206
@@ -17,10 +17,7 @@ export default class Borders extends Phaser.Physics.Arcade.Group {
 
         this.scene.events.on("leave", ()=>{
             if (this.scene.count_created_scenes > 2) {
-                if (this.count_created === 10) {
-                    this.count_created = 0
-                    // console.log(this.count_created)
-                }
+                if (this.count_created === 10) this.count_created = 0
                 this.createBorder(LEFT_X)
                 this.createBorder(RIGHT_X)
             }
