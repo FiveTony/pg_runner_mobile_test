@@ -1,6 +1,9 @@
-const LEFT = 300
-const CENTER = 500
-const RIGHT = 700
+const KOEF_X = window.innerWidth / 1080
+const KOEF_Y = window.innerHeight / 1920
+
+const LEFT = 340 * KOEF_X
+const CENTER = 540 * KOEF_X
+const RIGHT = 740* KOEF_X
 
 export default class Player extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, frame, config) {

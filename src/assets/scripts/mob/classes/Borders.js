@@ -1,10 +1,15 @@
 const BG_HEIGHT = 2200
 
-const WIDTH = 1000
-const HEIGHT = 1600
+const KOEF_Y = window.innerHeight / 1920
+const KOEF_X = window.innerWidth / 1080
 
-const LEFT_X = WIDTH / 2 - 206
-const RIGHT_X = WIDTH / 2 + 206
+const LIMIT_Y = window.innerHeight + 10
+
+const WIDTH = 1080
+const HEIGHT = 1920
+
+const LEFT_X = 700 
+const RIGHT_X = window.innerWidth - 700 
 
 export default class Borders extends Phaser.Physics.Arcade.Group {
     constructor(scene) {
@@ -27,17 +32,17 @@ export default class Borders extends Phaser.Physics.Arcade.Group {
         }, this)
     }
     createFirstBorders() {
-        let elem_1 = new Border(this.scene, LEFT_X, -BG_HEIGHT + HEIGHT + 10)
+        let elem_1 = new Border(this.scene, LEFT_X, -BG_HEIGHT * KOEF_Y + window.innerHeight + 10 * KOEF_Y)
         elem_1.move()
         this.add(elem_1)
-        let elem_2 = new Border(this.scene, RIGHT_X, -BG_HEIGHT + HEIGHT + 10)
+        let elem_2 = new Border(this.scene, RIGHT_X, -BG_HEIGHT * KOEF_Y + window.innerHeight + 10 * KOEF_Y)
         elem_2.move()
         this.add(elem_2)
         this.count_created = 2
     }
     createBorder(x) {
         let elem = this.getFirstDead()
-        elem.reset(x, -10)
+        elem.reset(x, -10 * KOEF_Y)
         elem.move()
         this.count_created++
     }
@@ -56,9 +61,11 @@ class Border extends Phaser.GameObjects.Sprite {
         this.scene.events.on('update', this.update, this)
         this.scene.events.on('start_game', this.move, this)
         this.scene.events.on('leave', this.move, this)
+
+        this.setScale(window.innerWidth / WIDTH, window.innerHeight / HEIGHT)
     }
     update(timestep, dt) {
-        if (this.y > HEIGHT + 10 && this.alive_status){
+        if (this.y > LIMIT_Y && this.alive_status){
             this.setAlive(false)
         } 
         this.y += this.velocityY

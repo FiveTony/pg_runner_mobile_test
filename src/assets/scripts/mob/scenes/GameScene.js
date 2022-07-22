@@ -9,8 +9,14 @@ import UI_elements from "../classes/UI_elements";
 import StartScene from "./StartScene";
 
 
-const WIDTH = 1000
-const HEIGHT = 1600
+const KOEF_X = window.innerWidth / 1080
+const KOEF_Y = window.innerHeight / 1920
+
+console.log(KOEF_X, KOEF_Y)
+console.log(window.innerWidth, window.innerHeight)
+
+const WIDTH = 1080
+const HEIGHT = 1920
 
 const GAME_VELOCITY_START = 5
 const GAME_VELOCITY_STEP = 1
@@ -47,24 +53,6 @@ export default class GameScene extends Phaser.Scene {
     this.isClicking = false
 
   }
-  preload() {
-    // this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
-    // this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
-    // this.load.image("left_element", "src/assets/sprites/mob/left_element2.jpg");
-    // this.load.image("right_element", "src/assets/sprites/mob/right_element2.jpg");
-
-    // this.load.image("room1", "src/assets/sprites/mob/rooms/jpg/room1.jpg");
-    // this.load.image("room2", "src/assets/sprites/mob/rooms/jpg/room2.jpg");
-    // this.load.image("room3", "src/assets/sprites/mob/rooms/jpg/room3.jpg");
-    // this.load.image("room4", "src/assets/sprites/mob/rooms/jpg/room4.jpg");
-    // this.load.image("room5", "src/assets/sprites/mob/rooms/jpg/room5.jpg");
-
-    // this.load.image("room1", "src/assets/sprites/mob/rooms/room1.png");
-    // this.load.image("room2", "src/assets/sprites/mob/rooms/room2.png");
-    // this.load.image("room3", "src/assets/sprites/mob/rooms/room3.png");
-    // this.load.image("room4", "src/assets/sprites/mob/rooms/room4.png");
-    // this.load.image("room5", "src/assets/sprites/mob/rooms/room5.png");
-  }
   create() {
     this.version = 1.4
     this.physics.world.setFPS(60) // 
@@ -96,18 +84,18 @@ export default class GameScene extends Phaser.Scene {
     // this.physics.add.existing(this.right_element2)
     // this.right_element2.body.enable = true
     
-    
-    this.left_element = this.add.tileSprite(0, 0, 160, HEIGHT, "left_element").setOrigin(0)
-    this.right_element = this.add.tileSprite(WIDTH - 160, 0, 0, HEIGHT, "right_element").setOrigin(0)
+    //!!
+    this.left_element = this.add.tileSprite(0, 0, 200, window.innerHeight, "left_element").setOrigin(0).setScale(window.innerWidth / WIDTH, window.innerHeight / HEIGHT)
+    this.right_element = this.add.tileSprite(window.innerWidth, window.innerHeight , window.innerWidth - 200, 0, "right_element").setOrigin(1).setScale(window.innerWidth / WIDTH, window.innerHeight / HEIGHT)
     
     this.player = new Player(
-      this, WIDTH / 2, HEIGHT / 2 + 500,
+      this, window.innerWidth / 2, window.innerHeight - 400,
       `player_${this.hero}_1`,{"playerScale": 1, hero: this.hero})
 
-      this.button_back = this.add.sprite(80, HEIGHT - 100, "ui_spritesheet","button_back").setInteractive()
+      this.button_back = this.add.sprite(120, window.innerHeight - 200, "ui_spritesheet","button_back").setInteractive()
       .once("pointerdown", ()=> this.defeat())
       
-      this.start_button = this.add.sprite(WIDTH / 2, HEIGHT / 2 + 700, "ui_spritesheet", "start")
+      this.start_button = this.add.sprite(window.innerWidth / 2, window.innerHeight - 200, "ui_spritesheet", "start")
         .setInteractive()
         .once("pointerdown", ()=> {
           this.player.play("player_animation");
@@ -165,8 +153,8 @@ export default class GameScene extends Phaser.Scene {
     // this.version_text = this.add.bitmapText(WIDTH / 2, HEIGHT / 2 + 350, 'Montserrat-Bold', `${this.version}`, 60)
   }
   update(timestep, dt) {
-    this.left_element.tilePositionY -= this.game_velocity
-    this.right_element.tilePositionY -= this.game_velocity
+    this.left_element.tilePositionY -= this.game_velocity * HEIGHT / innerHeight
+    this.right_element.tilePositionY -= this.game_velocity * HEIGHT / innerHeight
 
     // this.fps_text.setText(`${this.game.loop.actualFps}`)
 
@@ -514,8 +502,8 @@ export default class GameScene extends Phaser.Scene {
     });
   }
   defeat() {
-    this.game.scene.add('Start', StartScene, true, {mute: this.mute});
-    this.scene.remove("Game")
+    // this.game.scene.add('Start', StartScene, true, {mute: this.mute});
+    // this.scene.remove("Game")
   }
   // createSideElement() {
   //   console.log("createSideElement()")

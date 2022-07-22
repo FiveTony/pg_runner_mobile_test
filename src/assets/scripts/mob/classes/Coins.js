@@ -1,6 +1,12 @@
-const X_1 = 300
-const X_2 = 500
-const X_3 = 700
+
+const KOEF_Y = window.innerHeight / 1920
+const KOEF_X = window.innerWidth / 1080
+
+const LIMIT_Y = window.innerHeight + 50
+
+const X_1 = 340 * KOEF_X
+const X_2 = 540 * KOEF_X
+const X_3 = 740 * KOEF_X
 
 const X = [
     X_2, X_3, X_1, X_2,   
@@ -37,34 +43,6 @@ const Y = [
     -1200,
 ]
 
-// const DATA = [
-//     [X_2, -300],
-//     [X_3, -920],
-//     [X_1, -1200],
-//     [X_2, -1400],
-    
-//     [X_2, -80],
-//     [X_2, -500],
-//     [X_1, -920],
-//     [X_2, -1760],
-
-//     [X_2, -720],
-//     [X_3, -1140],
-//     [X_3, -1500],
-//     [X_2, -1920],
-
-//     [X_2, -320],
-//     [X_3, -720],
-//     [X_3, -1780],
-//     [X_2, -1980],
-
-//     [X_2, -520],
-//     [X_3, -800],
-//     [X_2, -1600],
-//     [X_3, -1200],
-// ]
-
-
 export default class Coins extends Phaser.Physics.Arcade.Group {
     constructor(scene) {
         super(scene.physics.world, scene)
@@ -86,35 +64,35 @@ export default class Coins extends Phaser.Physics.Arcade.Group {
         }, this)
     }
     createFirstElements() {
-        let elem_1 = new Coin(this.scene, X_2, 1000)
+        let elem_1 = new Coin(this.scene, X_2, (1000+ 320) * KOEF_Y)
         elem_1.move()
         this.add(elem_1)
 
-        let elem_2 = new Coin(this.scene, X_3, 600)
+        let elem_2 = new Coin(this.scene, X_3,( 600+ 320) * KOEF_Y)
         elem_2.move()
         this.add(elem_2)
 
-        let elem_3 = new Coin(this.scene, X_1, 200)
+        let elem_3 = new Coin(this.scene, X_1, (200+ 320) * KOEF_Y)
         elem_3.move()
         this.add(elem_3)
 
-        let elem_4 = new Coin(this.scene, X_2, -200)
+        let elem_4 = new Coin(this.scene, X_2, (-200 + 320) * KOEF_Y)
         elem_4.move()
         this.add(elem_4)
 
-        let elem_5 = new Coin(this.scene, X_2, -700)
+        let elem_5 = new Coin(this.scene, X_2, (-700  + 320) * KOEF_Y)
         elem_5.move()
         this.add(elem_5)
 
-        let elem_6 = new Coin(this.scene, X_1, -1100)
+        let elem_6 = new Coin(this.scene, X_1, (-1100+ 320) * KOEF_Y)
         elem_6.move()
         this.add(elem_6)
 
-        let elem_7 = new Coin(this.scene, X_1, -1760)
+        let elem_7 = new Coin(this.scene, X_1, (-1760 + 320) * KOEF_Y)
         elem_7.move()
         this.add(elem_7)
 
-        let elem_8 = new Coin(this.scene, X_2, -2180)
+        let elem_8 = new Coin(this.scene, X_2, (-2180 + 320) * KOEF_Y)
         elem_8.move()
         this.add(elem_8)
 
@@ -150,7 +128,7 @@ class Coin extends Phaser.GameObjects.Sprite {
         this.scene.events.on('leave', this.move, this)
     }
     update(timestep, dt) {
-        if (this.y > 1650 && this.alive_status){
+        if (this.y > 1650 + 320 && this.alive_status){
             this.setAlive(false)
         } 
         this.y += this.velocityY
@@ -164,7 +142,7 @@ class Coin extends Phaser.GameObjects.Sprite {
     }
     reset(x, y) {
         this.x = x
-        this.y = y
+        this.y = y * KOEF_Y
         this.setAlive(true)        
     }
     move() {

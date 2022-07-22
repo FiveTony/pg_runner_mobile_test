@@ -1,8 +1,11 @@
 import GameScene from "./GameScene";
 import StartScene from "./StartScene";
 
-const WIDTH = 1000
-const HEIGHT = 1600
+const WIDTH = 1080
+const HEIGHT = 1920
+
+const KOEF_X = window.innerWidth / 1080
+const KOEF_Y = window.innerHeight / 1920
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -23,21 +26,11 @@ export default class PreloadScene extends Phaser.Scene {
 
     this.createElements()
     this.preloadAssets();
-
-    // this.circle = this.add.sprite(WIDTH / 2, HEIGHT / 2, "preload_spritesheet", "circle")
-
-    // this.tweens.add({
-    //   targets: this.circle,
-    //   angle : {
-    //     from : 0,
-    //     to: 360
-    //   },
-    //   ease: "Linear",
-    //   duration: 1400,
-    //   repeat: -1
-    // });
   }
   create() {
+    // this.scale.displaySize.setAspectRatio( window.innerWidth/window.innerHeight );
+    // this.scale.refresh();
+
     this.game.scene.add('Start', StartScene, true, {mute: false});
       // this.game.scene.add('Game', GameScene, true, {hero: "musya", play_num: 1, mute: false});
 }
@@ -60,11 +53,11 @@ export default class PreloadScene extends Phaser.Scene {
       "src/assets/sprites/mob/prompts_spritesheet.json");
     
       
-    this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
-    this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
+    // this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
+    // this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
 
-    // this.load.image("left_element", "src/assets/sprites/mob/left_element2.jpg");
-    // this.load.image("right_element", "src/assets/sprites/mob/right_element2.jpg");
+    this.load.image("left_element", "src/assets/sprites/mob/left_element1920.jpg");
+    this.load.image("right_element", "src/assets/sprites/mob/right_element1920.jpg");
 
     this.load.image("button_back", "src/assets/sprites/desk/button_back.png");
 
@@ -92,37 +85,9 @@ export default class PreloadScene extends Phaser.Scene {
       "src/assets/sprites/mob/player/player_dima_spritesheet.json");
   }
   preloadStartScene() {
-    // this.load.svg("rita_capture", "src/assets/sprites/mob/StartScene/rita_capture.svg");
-    // this.load.svg("dima_capture", "src/assets/sprites/mob/StartScene/dima_capture.svg");
-    // this.load.svg("musya_capture", "src/assets/sprites/mob/StartScene/musya_capture.svg");
-
-    // this.load.svg("rita_text", "src/assets/sprites/mob/StartScene/rita_text.svg");
-    // this.load.svg("dima_text", "src/assets/sprites/mob/StartScene/dima_text.svg");
-    // this.load.svg("musya_text", "src/assets/sprites/mob/StartScene/musya_text.svg");
-
-    // this.load.image("rita_text", "src/assets/sprites/mob/StartScene/rita_text.png");
-    // this.load.image("dima_text", "src/assets/sprites/mob/StartScene/dima_text.png");
-    // this.load.image("musya_text", "src/assets/sprites/mob/StartScene/musya_text.png");
-
-    // this.load.svg("rita_label", "src/assets/sprites/mob/StartScene/rita_label.svg");
-    // this.load.svg("dima_label", "src/assets/sprites/mob/StartScene/dima_label.svg");
-    // this.load.svg("musya_label", "src/assets/sprites/mob/StartScene/musya_label.svg");
-
-    // this.load.svg("rita_button", "src/assets/sprites/mob/StartScene/rita_button.svg");
-    // this.load.svg("dima_button", "src/assets/sprites/mob/StartScene/dima_button.svg");
-    // this.load.svg("musya_button", "src/assets/sprites/mob/StartScene/musya_button.svg");
-
-    // this.load.svg("rita_slider", "src/assets/sprites/mob/StartScene/rita_slider.svg");
-    // this.load.svg("dima_slider", "src/assets/sprites/mob/StartScene/dima_slider.svg");
-    // this.load.svg("musya_slider", "src/assets/sprites/mob/StartScene/musya_slider.svg");
-
-    // this.load.svg("arrow", "src/assets/sprites/mob/StartScene/arrow.svg");
-
     this.load.atlas(
-      "start_spritesheet", "src/assets/sprites/mob/StartScene/test/start_spritesheet.png", 
-      "src/assets/sprites/mob/StartScene/test/start_spritesheet.json");
-
-
+      "start_spritesheet", "src/assets/sprites/mob/StartScene/start_spritesheet.png", 
+      "src/assets/sprites/mob/StartScene/start_spritesheet.json");
   }
   preloadRooms() {
     this.load.image("room1", "src/assets/sprites/mob/rooms/room1.png");
@@ -147,25 +112,26 @@ export default class PreloadScene extends Phaser.Scene {
       "src/assets/sprites/mob/negative/test/negative_spritesheet.json");
 
     this.load.atlas(
-      "positive_spritesheet", "src/assets/sprites/mob/positive/test/positive_spritesheet.png", 
-      "src/assets/sprites/mob/positive/test/positive_spritesheet.json");
+      "positive_spritesheet", "src/assets/sprites/mob/positive/test2/positive_spritesheet.png", 
+      "src/assets/sprites/mob/positive/test2/positive_spritesheet.json");
   }
   createElements() {
     let preload_graphics = this.add.graphics()
       .fillGradientStyle(0x062A67,0x062A67,0x1A499B, 0x1A499B, 1)
-      .fillRect(0, 0, WIDTH, HEIGHT);
+      .fillRect(0, 0, window.innerWidth , window.innerHeight);
 
-    let preload_text = this.add.text(WIDTH / 2, 260, "Подумай\nо хорошем,\nпока ждёшь 😊", {
-        font: 'bold 68px Montserrat',
+    let preload_text = this.add.text(window.innerWidth / 2, 300, "Подумай\nо хорошем,\nпока ждёшь 😊", {
+        font: 'bold 70px Montserrat',
         fill: '#FFFFFF',
         align: 'center',  // 'left'|'center'|'right'|'justify'
         lineSpacing: 10,
       }).setOrigin(0.5)
-    let preload_label = this.add.sprite(WIDTH / 2, 1380, "preload_spritesheet", "pg_label")
-    let preload_pattern = this.add.sprite(WIDTH / 2, HEIGHT / 2, "preload_spritesheet", "pattern")
+    let preload_label = this.add.sprite(window.innerWidth / 2, window.innerHeight - 500, "preload_spritesheet", "pg_label")
+    let preload_pattern = this.add.sprite(window.innerWidth / 2, window.innerHeight / 2, "preload_spritesheet", "pattern")
+    .setScale(window.innerWidth / WIDTH, window.innerHeight / HEIGHT)
     // let circle = this.add.sprite(WIDTH / 2, HEIGHT / 2, "preload_spritesheet", "circle")
 
-      this.circle = this.add.sprite(WIDTH / 2, HEIGHT / 2, "preload_spritesheet", "circle")
+      this.circle = this.add.sprite(window.innerWidth / 2, window.innerHeight / 2 - 40, "preload_spritesheet", "circle")
 
       this.tweens.add({
         targets: this.circle,
@@ -186,5 +152,10 @@ export default class PreloadScene extends Phaser.Scene {
       this.circle.destroy()
       this.load.removeAllListeners()
     }, this)
+
+
+
+
   }
+  
 }

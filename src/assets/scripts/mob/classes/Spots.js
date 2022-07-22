@@ -1,9 +1,14 @@
-const BG_WIDTH = 340
-const BG_HEIGHT = 1100
 
-const X_1 = 300
-const X_2 = 500
-const X_3 = 700
+const KOEF_Y = window.innerHeight / 1920
+const KOEF_X = window.innerWidth / 1080
+
+const LIMIT_Y = window.innerHeight + 50
+
+console.log(KOEF_X, KOEF_Y)
+
+const X_1 = 340 * KOEF_X
+const X_2 = 540 * KOEF_X
+const X_3 = 740 * KOEF_X
 
 const X = [X_1, X_2, X_2,   X_2, X_1, X_3,  X_1, X_3, X_3,  X_3, X_3, X_1,  X_3, X_1, X_1]
 const Y = [
@@ -49,6 +54,7 @@ const DATA = [
     [X_1, -1600],
 ]
 
+
 export default class Spots extends Phaser.Physics.Arcade.Group {
     constructor(scene) {
         super(scene.physics.world, scene)
@@ -59,12 +65,7 @@ export default class Spots extends Phaser.Physics.Arcade.Group {
 
         this.scene.events.on("leave", ()=>{
             if (this.scene.count_created_scenes > 2 ) {
-                // console.log("UPDATE ",this.scene.events.listenerCount("update"))
-                // console.log("LEAVE ",this.scene.events.listenerCount("leave"))
-                    if (this.count_created === 15) {
-                        this.count_created = 0
-                        // console.log(this.count_created)
-                    }
+                    if (this.count_created === 15) this.count_created = 0
                 this.createSpot()
                 this.createSpot()
                 this.createSpot()
@@ -73,32 +74,32 @@ export default class Spots extends Phaser.Physics.Arcade.Group {
     }
     createFirstElements() {
         let data_1 = DATA[0]
-        let elem_1 = new Spot(this.scene, X_1, 1000, 'positive_spritesheet', 'spot_2')
+        let elem_1 = new Spot(this.scene, X_1, (1000 + 320) * KOEF_Y, 'positive_spritesheet', 'spot_2')
         elem_1.move()
         this.add(elem_1)
 
         let data_2 = DATA[1]
-        let elem_2 = new Spot(this.scene, X_2, 600, 'positive_spritesheet', 'spot_1')
+        let elem_2 = new Spot(this.scene, X_2, (600 + 320) * KOEF_Y, 'positive_spritesheet', 'spot_1')
         elem_2.move()
         this.add(elem_2)
 
         let data_3 = DATA[2]
-        let elem_3 = new Spot(this.scene, X_2, -400, 'positive_spritesheet', 'spot_2')
+        let elem_3 = new Spot(this.scene, X_2, (-400 + 320) * KOEF_Y, 'positive_spritesheet', 'spot_2')
         elem_3.move()
         this.add(elem_3)
 
         let data_4 = DATA[3]
-        let elem_4 = new Spot(this.scene, X_2, -1120, 'positive_spritesheet', 'spot_2')
+        let elem_4 = new Spot(this.scene, X_2, (-1120 + 320)* KOEF_Y, 'positive_spritesheet', 'spot_2')
         elem_4.move()
         this.add(elem_4)
 
         let data_5 = DATA[4]
-        let elem_5 = new Spot(this.scene, X_1, -1980, 'positive_spritesheet', 'spot_2')
+        let elem_5 = new Spot(this.scene, X_1, (-1980 + 320) * KOEF_Y, 'positive_spritesheet', 'spot_2')
         elem_5.move()
         this.add(elem_5)
 
         let data_6 = DATA[5]
-        let elem_6 = new Spot(this.scene, X_3, -2580, 'positive_spritesheet', 'spot_1')
+        let elem_6 = new Spot(this.scene, X_3, (-2580 + 320) * KOEF_Y, 'positive_spritesheet', 'spot_1')
         elem_6.move()
         this.add(elem_6)
 
@@ -139,10 +140,9 @@ class Spot extends Phaser.GameObjects.Sprite {
         this.scene.events.on('update', this.update, this)
         this.scene.events.on('start_game', this.move, this)
         this.scene.events.on('leave', this.move, this)
-        // console.log("init()",this)
     }
     update(timestep, dt) {
-        if (this.y > 1650 && this.alive_status){
+        if (this.y > LIMIT_Y && this.alive_status){
             this.setAlive(false)
         } 
         this.y += this.velocityY
@@ -155,7 +155,7 @@ class Spot extends Phaser.GameObjects.Sprite {
     }
     reset(x, y, frame) {
         this.x = x
-        this.y = y
+        this.y = y * KOEF_Y
         this.setFrame(frame)
         this.setAlive(true)
 

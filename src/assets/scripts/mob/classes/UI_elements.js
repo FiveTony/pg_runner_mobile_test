@@ -21,7 +21,7 @@ export default class UI_elements {
     createSoundButtons() {
         let sound_sprite
         !this.scene.mute ? sound_sprite = "musicOn" : sound_sprite = "musicOff"
-        this.sound = this.scene.add.sprite(455 * 2, 40 * 2, "ui_spritesheet", sound_sprite).setInteractive()
+        this.sound = this.scene.add.sprite(window.innerWidth - 40* 2, 40* 2, "ui_spritesheet", sound_sprite).setInteractive()
     }
 
 }

@@ -3,8 +3,11 @@ import Room from "./Room"
 const BG_WIDTH = 680
 const BG_HEIGHT = 2200
 
-const WIDTH = 1000
-const HEIGHT = 1600
+const WIDTH = 1080
+const HEIGHT = 1920
+
+const KOEF_X = window.innerWidth / 1080
+const KOEF_Y = window.innerHeight / 1920
 
 export default class Rooms extends Phaser.Physics.Arcade.Group {
     constructor(scene) {
@@ -23,7 +26,7 @@ export default class Rooms extends Phaser.Physics.Arcade.Group {
         }, this)
     }
     createFirstRoom() {     
-        let first_room = new Room(this.scene, WIDTH / 2 + BG_WIDTH / 2, HEIGHT, "room1")
+        let first_room = new Room(this.scene, (WIDTH / 2 + BG_WIDTH / 2) * KOEF_X, window.innerHeight, "room1") //!!
         // console.log(first_room.y)
         this.add(first_room)
         first_room.move()
@@ -35,7 +38,7 @@ export default class Rooms extends Phaser.Physics.Arcade.Group {
         let second_room = this.getFirstDead()
         if (!second_room) {
             // console.log("!second_room")
-            second_room = new Room(this.scene, WIDTH / 2 + BG_WIDTH / 2, 0, "room2")
+            second_room = new Room(this.scene, (WIDTH / 2 + BG_WIDTH / 2) * KOEF_X, 0, "room2") //!!
             this.add(second_room)
             // console.log(second_room.y)
         } else {
