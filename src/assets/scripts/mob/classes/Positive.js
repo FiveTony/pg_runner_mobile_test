@@ -92,8 +92,6 @@ class PositiveObject extends Phaser.GameObjects.Sprite {
         this.body.enable = true
         this.alive_status = true
 
-        console.log(this.scale)
-
         let angle = ANGLE[Phaser.Math.Between(0, 1)]
         this.setAngle(angle)
         this.scene.events.on('update', this.update, this)

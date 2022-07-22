@@ -17,11 +17,12 @@ export default class BootScene extends Phaser.Scene {
     // this.load.audio("main_theme", "assets/sounds/main_theme.mp3");
     this.load.bitmapFont('Montserrat-Bold', 'src/assets/fonts/Montserrat-Bold.png', 'src/assets/fonts/Montserrat-Bold.xml');
 
-    let preload_graphics = this.add.graphics()
+    this.preload_graphics = this.add.graphics()
       .fillGradientStyle(0x062A67,0x062A67,0x1A499B, 0x1A499B, 1)
       .fillRect(0, 0, WIDTH, HEIGHT);
   }
   create() {
+    this.preload_graphics.destroy()
     this.scene.start("Preload");
   }
 }

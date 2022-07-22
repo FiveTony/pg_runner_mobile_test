@@ -10,7 +10,7 @@ export default class PreloadScene extends Phaser.Scene {
     console.log("PreloadScene")
   }
   preload() {
-        this.load.audio("main_theme", "src/assets/sounds/main_theme.mp3");
+    // this.load.audio("main_theme", "src/assets/sounds/main_theme.mp3");
 
     this.createElements()
     this.preloadAssets();
@@ -48,10 +48,14 @@ export default class PreloadScene extends Phaser.Scene {
       "src/assets/sprites/mob/prompts_spritesheet.json");
     
       
-    this.load.image("left_element", "src/assets/sprites/mob/left_element.jpg");
-    this.load.image("right_element", "src/assets/sprites/mob/right_element.jpg");
+    // this.load.image("left_element", "src/assets/sprites/mob/left_element.jpg");
+    // this.load.image("right_element", "src/assets/sprites/mob/right_element.jpg");
 
-    // this.load.image("button_back", "src/assets/sprites/desk/button_back.png");
+    // this.load.image("left_element", "src/assets/sprites/mob/left_element.png");
+    // this.load.image("right_element", "src/assets/sprites/mob/right_element.png");
+
+    this.load.image("left_element", "src/assets/sprites/mob/half/minPNG/left_element.png");
+    this.load.image("right_element", "src/assets/sprites/mob/half/minPNG/right_element.png");
 
 
     this.preloadStartScene()
@@ -90,8 +94,8 @@ export default class PreloadScene extends Phaser.Scene {
   }
   preloadNegativePositive() {
     this.load.atlas(
-      "negative_spritesheet", "src/assets/sprites/mob/negative/negative_spritesheet.png", 
-      "src/assets/sprites/mob/negative/negative_spritesheet.json");
+      "negative_spritesheet", "src/assets/sprites/mob/negative/minPNG/negative_spritesheet.png", 
+      "src/assets/sprites/mob/negative/minPNG/negative_spritesheet.json");
 
     this.load.atlas(
       "positive_spritesheet", "src/assets/sprites/mob/positive/positive_spritesheet.png", 
@@ -126,12 +130,12 @@ export default class PreloadScene extends Phaser.Scene {
       });
 
     this.load.on('complete', ()=> {
-      // preload_text.destroy()
-      // preload_graphics.destroy()
-      // preload_label.destroy()
-      // preload_pattern.destroy()
-      // this.circle.destroy()
-      // this.load.removeAllListeners()
+      preload_text.destroy()
+      preload_graphics.destroy()
+      preload_label.destroy()
+      preload_pattern.destroy()
+      this.circle.destroy()
+      this.load.removeAllListeners()
     }, this)
 
 

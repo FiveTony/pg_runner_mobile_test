@@ -56,7 +56,10 @@ export default class GameScene extends Phaser.Scene {
     let rooms = new Rooms(this)
     
     this.left_element = this.add.tileSprite(0, 0, 200, HEIGHT, "left_element").setOrigin(0)
-    this.right_element = this.add.tileSprite(WIDTH - 200, 0, 0, HEIGHT, "right_element").setOrigin(0)
+    this.right_element = this.add.tileSprite(WIDTH - 200, 0, 200, HEIGHT, "right_element").setOrigin(0)
+
+    console.log(this.left_element.x, this.left_element.y, this.right_element.x, this.right_element.y)
+    console.log(this.left_element, this.right_element)
     
     this.player = new Player(
       this, WIDTH / 2, HEIGHT - 340,
@@ -424,7 +427,7 @@ export default class GameScene extends Phaser.Scene {
     this.scene.remove("Game")
   }
   defeat() {
-    this.scene.pause()
+    // this.scene.pause()
     // if (this.play_num < 4) {
     //     const btnRestartGame = document.querySelector('[restart-game]');
     //     popupShow('#attempts', this.score); 
