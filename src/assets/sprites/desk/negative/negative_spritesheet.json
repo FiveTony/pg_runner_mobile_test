@@ -1,315 +1,356 @@
 {
-	"frames": {
-		"room1_1": {
-			"frame": {
-				"x": 1,
-				"y": 1,
-				"w": 199,
-				"h": 399
+	"textures": [
+		{
+			"image": "negative_spritesheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2011,
+				"h": 1002
 			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 199,
-				"h": 399
-			},
-			"sourceSize": {
-				"w": 199,
-				"h": 399
-			}
-		},
-		"room1_2": {
-			"frame": {
-				"x": 202,
-				"y": 1,
-				"w": 305,
-				"h": 344
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 305,
-				"h": 344
-			},
-			"sourceSize": {
-				"w": 305,
-				"h": 344
-			}
-		},
-		"room1_3": {
-			"frame": {
-				"x": 509,
-				"y": 1,
-				"w": 166,
-				"h": 679
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 166,
-				"h": 679
-			},
-			"sourceSize": {
-				"w": 166,
-				"h": 679
-			}
-		},
-		"room2_1": {
-			"frame": {
-				"x": 677,
-				"y": 1,
-				"w": 288,
-				"h": 300
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 288,
-				"h": 300
-			},
-			"sourceSize": {
-				"w": 288,
-				"h": 300
-			}
-		},
-		"room2_2": {
-			"frame": {
-				"x": 967,
-				"y": 1,
-				"w": 268,
-				"h": 1015
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 268,
-				"h": 1015
-			},
-			"sourceSize": {
-				"w": 268,
-				"h": 1015
-			}
-		},
-		"room2_3": {
-			"frame": {
-				"x": 1237,
-				"y": 1,
-				"w": 303,
-				"h": 652
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 303,
-				"h": 652
-			},
-			"sourceSize": {
-				"w": 303,
-				"h": 652
-			}
-		},
-		"room3_1": {
-			"frame": {
-				"x": 1,
-				"y": 655,
-				"w": 213,
-				"h": 564
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 213,
-				"h": 564
-			},
-			"sourceSize": {
-				"w": 213,
-				"h": 564
-			}
-		},
-		"room3_2": {
-			"frame": {
-				"x": 216,
-				"y": 1018,
-				"w": 482,
-				"h": 383
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 482,
-				"h": 383
-			},
-			"sourceSize": {
-				"w": 482,
-				"h": 383
-			}
-		},
-		"room3_3": {
-			"frame": {
-				"x": 1237,
-				"y": 655,
-				"w": 306,
-				"h": 344
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 306,
-				"h": 344
-			},
-			"sourceSize": {
-				"w": 306,
-				"h": 344
-			}
-		},
-		"room4_1": {
-			"frame": {
-				"x": 1237,
-				"y": 1001,
-				"w": 288,
-				"h": 570
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 288,
-				"h": 570
-			},
-			"sourceSize": {
-				"w": 288,
-				"h": 570
-			}
-		},
-		"room4_2": {
-			"frame": {
-				"x": 216,
-				"y": 655,
-				"w": 234,
-				"h": 265
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 234,
-				"h": 265
-			},
-			"sourceSize": {
-				"w": 234,
-				"h": 265
-			}
-		},
-		"room4_3": {
-			"frame": {
-				"x": 677,
-				"y": 655,
-				"w": 274,
-				"h": 206
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 274,
-				"h": 206
-			},
-			"sourceSize": {
-				"w": 274,
-				"h": 206
-			}
-		},
-		"room5_1": {
-			"frame": {
-				"x": 1,
-				"y": 1573,
-				"w": 329,
-				"h": 339
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 329,
-				"h": 339
-			},
-			"sourceSize": {
-				"w": 329,
-				"h": 339
-			}
-		},
-		"room5_2": {
-			"frame": {
-				"x": 1542,
-				"y": 1,
-				"w": 311,
-				"h": 511
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 311,
-				"h": 511
-			},
-			"sourceSize": {
-				"w": 311,
-				"h": 511
-			}
-		},
-		"room5_3": {
-			"frame": {
-				"x": 1545,
-				"y": 514,
-				"w": 300,
-				"h": 276
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 300,
-				"h": 276
-			},
-			"sourceSize": {
-				"w": 300,
-				"h": 276
-			}
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "room2_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 268,
+						"h": 1015
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 15,
+						"w": 268,
+						"h": 1000
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 268,
+						"h": 1000
+					}
+				},
+				{
+					"filename": "room4_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 288,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 288,
+						"h": 570
+					},
+					"frame": {
+						"x": 271,
+						"y": 1,
+						"w": 288,
+						"h": 570
+					}
+				},
+				{
+					"filename": "room3_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 482,
+						"h": 383
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 8,
+						"w": 482,
+						"h": 375
+					},
+					"frame": {
+						"x": 561,
+						"y": 1,
+						"w": 482,
+						"h": 375
+					}
+				},
+				{
+					"filename": "room5_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 311,
+						"h": 511
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 311,
+						"h": 511
+					},
+					"frame": {
+						"x": 1045,
+						"y": 1,
+						"w": 311,
+						"h": 511
+					}
+				},
+				{
+					"filename": "room2_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 303,
+						"h": 652
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 59,
+						"w": 269,
+						"h": 553
+					},
+					"frame": {
+						"x": 1358,
+						"y": 1,
+						"w": 269,
+						"h": 553
+					}
+				},
+				{
+					"filename": "room3_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 213,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 213,
+						"h": 564
+					},
+					"frame": {
+						"x": 1629,
+						"y": 1,
+						"w": 213,
+						"h": 564
+					}
+				},
+				{
+					"filename": "room1_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 166,
+						"h": 679
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 166,
+						"h": 679
+					},
+					"frame": {
+						"x": 1844,
+						"y": 1,
+						"w": 166,
+						"h": 679
+					}
+				},
+				{
+					"filename": "room3_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 306,
+						"h": 344
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 0,
+						"w": 284,
+						"h": 344
+					},
+					"frame": {
+						"x": 271,
+						"y": 573,
+						"w": 284,
+						"h": 344
+					}
+				},
+				{
+					"filename": "room5_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 300,
+						"h": 276
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 300,
+						"h": 276
+					},
+					"frame": {
+						"x": 561,
+						"y": 378,
+						"w": 300,
+						"h": 276
+					}
+				},
+				{
+					"filename": "room1_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 305,
+						"h": 344
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 297,
+						"h": 333
+					},
+					"frame": {
+						"x": 557,
+						"y": 656,
+						"w": 297,
+						"h": 333
+					}
+				},
+				{
+					"filename": "border",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 260,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 260,
+						"h": 51
+					},
+					"frame": {
+						"x": 271,
+						"y": 919,
+						"w": 260,
+						"h": 51
+					}
+				},
+				{
+					"filename": "room4_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 234,
+						"h": 265
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 234,
+						"h": 264
+					},
+					"frame": {
+						"x": 856,
+						"y": 656,
+						"w": 234,
+						"h": 264
+					}
+				},
+				{
+					"filename": "room1_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 199,
+						"h": 399
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 199,
+						"h": 399
+					},
+					"frame": {
+						"x": 1092,
+						"y": 514,
+						"w": 199,
+						"h": 399
+					}
+				},
+				{
+					"filename": "room4_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 274,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 274,
+						"h": 206
+					},
+					"frame": {
+						"x": 1293,
+						"y": 556,
+						"w": 274,
+						"h": 206
+					}
+				},
+				{
+					"filename": "room2_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 220
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 252,
+						"h": 216
+					},
+					"frame": {
+						"x": 1293,
+						"y": 764,
+						"w": 252,
+						"h": 216
+					}
+				},
+				{
+					"filename": "room5_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 329,
+						"h": 339
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 61,
+						"w": 201,
+						"h": 219
+					},
+					"frame": {
+						"x": 1569,
+						"y": 567,
+						"w": 201,
+						"h": 219
+					}
+				}
+			]
 		}
-	},
+	],
 	"meta": {
-		"app": "http://www.codeandweb.com/texturepacker",
-		"version": "1.0",
-		"image": "spritesheet.png",
-		"format": "RGBA8888",
-		"size": {
-			"w": 1854,
-			"h": 1913
-		},
-		"scale": "1"
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:369309dc623cf2ecab235dcae0346da9:6209520fd42ef8223487b59a9afebae9:b1ecde0fd3dbb5233f17942bb4db5f27$"
 	}
 }
